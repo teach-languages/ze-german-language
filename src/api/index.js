@@ -3,6 +3,7 @@ const log = require('../logger');
 const express = require('express');
 
 // Middleware
+const cors = require('cors');
 const respond = require('./tools/respond');
 const verify = require('./tools/verify');
 
@@ -11,6 +12,7 @@ const word = require('./word');
 
 // Create app
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(respond);
 app.use(verify);
