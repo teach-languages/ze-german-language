@@ -1,0 +1,228 @@
+{
+    "personal": {
+        "ich": {
+            "caseSensitive": false,
+            "person": 1,
+            "plural": false,
+            "gender": false,
+            "accusative": "mich",
+            "dative": "mir",
+            "substantial": "meins",
+            "conjugation": {
+                "present": "e",
+                "past": "te",
+                "conjunctive": "e",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "mein": ["nm", "nn"],
+                "meine": ["nf", "np"],
+                "meinen": ["am", "dp"],
+                "meinem": ["dm", "dn"],
+                "meiner": ["df", "gf", "gp"],
+                "meines": ["gm", "gn"]
+            }
+        },
+
+        "du": {
+            "caseSensitive": false,
+            "person": 2,
+            "plural": false,
+            "gender": false,
+            "accusative": "dich",
+            "dative": "dir",
+            "substantial": "deins",
+            "conjugation": {
+                "present": "st",
+                "past": "test",
+                "conjunctive": "est",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "dein": ["nm", "nn"],
+                "deine": ["nf", "np"],
+                "deinen": ["am", "dp"],
+                "deinem": ["dm", "dn"],
+                "deiner": ["df", "gf", "gp"],
+                "deines": ["gm", "gn"]
+            }
+        },
+
+        "Sie": {
+            "caseSensitive": true,
+            "person": 2,
+            "plural": false,
+            "gender": false,
+            "accusative": "Sie",
+            "dative": "Ihnen",
+            "substantial": false,
+            "conjugation": {
+                "present": "en",
+                "past": "ten",
+                "conjunctive": "en",
+                "imperative": "en"
+            },
+
+            "genitive": {
+                "Ihr": ["nm", "nn"],
+                "Ihre": ["nf", "np"],
+                "Ihren": ["am", "dp"],
+                "Ihrem": ["dm", "dn"],
+                "Ihrer": ["df", "gf", "gp"],
+                "Ihres": ["gm", "gn"]
+            }
+        },
+
+        "er": {
+            "caseSensitive": false,
+            "person": 3,
+            "plural": false,
+            "gender": "masculine",
+            "accusative": "ihn",
+            "dative": "ihm",
+            "substantial": "seins",
+            "conjugation": {
+                "present": "t",
+                "past": "te",
+                "conjunctive": "e",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "sein": ["nm", "nn"],
+                "seine": ["nf", "np"],
+                "seinen": ["am", "dp"],
+                "seinem": ["dm", "dn"],
+                "seiner": ["df", "gf", "gp"],
+                "seines": ["gm", "gn"]
+            }
+        },
+
+        "sie": {
+            "caseSensitive": false,
+            "person": 3,
+            "plural": false,
+            "gender": "feminine",
+            "accusative": "sie",
+            "dative": "ihr",
+            "substantial": false,
+            "conjugation": {
+                "present": "t",
+                "past": "te",
+                "conjunctive": "e",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "ihr": ["nm", "nn"],
+                "ihre": ["nf", "np"],
+                "ihren": ["am", "dp"],
+                "ihrem": ["dm", "dn"],
+                "ihrer": ["df", "gf", "gp"],
+                "ihres": ["gm", "gn"]
+            }
+        },
+
+        "es": {
+            "caseSensitive": false,
+            "person": 3,
+            "plural": false,
+            "gender": "neutral",
+            "accusative": "es",
+            "dative": "ihm",
+            "substantial": "sein",
+            "conjugation": {
+                "present": "t",
+                "past": "te",
+                "conjunctive": "e",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "sein": ["nm", "nn"],
+                "seine": ["nf", "np"],
+                "seinen": ["am", "dp"],
+                "seinem": ["dm", "dn"],
+                "seiner": ["df", "gf", "gp"],
+                "seines": ["gm", "gn"]
+            }
+        },
+
+        "wir": {
+            "caseSensitive": false,
+            "person": 1,
+            "plural": true,
+            "gender": false,
+            "accusative": "uns",
+            "dative": "uns",
+            "substantial": false,
+            "conjugation": {
+                "present": "en",
+                "past": "ten",
+                "conjunctive": "en",
+                "imperative": "en"
+            },
+
+            "genitive": {
+                "unser": ["nm", "nn"],
+                "unsere": ["nf", "np"],
+                "unseren": ["am", "dp"],
+                "unserem": ["dm", "dn"],
+                "unserer": ["df", "gf", "gp"],
+                "unseres": ["gm", "gn"]
+            }
+        },
+
+        "ihr": {
+            "caseSensitive": false,
+            "person": 2,
+            "plural": true,
+            "gender": false,
+            "accusative": "euch",
+            "dative": "euch",
+            "substantial": false,
+            "conjugation": {
+                "present": "t",
+                "past": "tet",
+                "conjunctive": "et",
+                "imperative": "t"
+            },
+
+            "genitive": {
+                "euer": ["nm", "nn"],
+                "euere": ["nf", "np"],
+                "eueren": ["am", "dp"],
+                "euerem": ["dm", "dn"],
+                "euerer": ["df", "gf", "gp"],
+                "eueres": ["gm", "gn"]
+            }
+        },
+
+        "_sie": {
+            "caseSensitive": false,
+            "person": 3,
+            "plural": true,
+            "gender": false,
+            "accusative": "sie",
+            "dative": "ihr",
+            "substantial": false,
+            "conjugation": {
+                "present": "en",
+                "past": "ten",
+                "conjunctive": "en",
+                "imperative": ""
+            },
+
+            "genitive": {
+                "ihr": ["nm", "nn"],
+                "ihre": ["nf", "np"],
+                "ihren": ["am", "dp"],
+                "ihrem": ["dm", "dn"],
+                "ihrer": ["df", "gf", "gp"],
+                "ihres": ["gm", "gn"]
+            }
+        }
+    }
+}

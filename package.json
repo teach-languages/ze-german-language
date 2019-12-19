@@ -1,0 +1,22 @@
+{
+  "name": "ze-german-language",
+  "version": "1.0.0",
+  "description": "The language we all know and love as .JSON files.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint --fix ./src",
+    "api-debug": "nodemon . -- --run api --verbose",
+    "produce": "pm2 start . --name \"german-api\" -i 4 -- --verbose --run api",
+    "stop": "pm2 stop german-api"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2"
+  }
+}

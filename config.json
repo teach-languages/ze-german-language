@@ -1,0 +1,6 @@
+{
+    "verbose": false,
+    "api": {
+        "port": 3000
+    }
+}

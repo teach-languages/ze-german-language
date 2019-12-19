@@ -1,0 +1,17 @@
+{
+    "definite": {
+        "der": ["nm", "df", "gp"],
+        "die": ["nf", "np"],
+        "das": ["nn"],
+        "den": ["am", "dp"],
+        "dem": ["dm", "dn"],
+        "des": ["gm", "gn"]
+    },
+    "indefinite": {
+        "ein": ["nm", "nn"],
+        "eine": ["nf"],
+        "einem": ["dm", "dn"],
+        "einer": ["df", "gf"],
+        "eines": ["gm", "gn"]
+    }
+}
