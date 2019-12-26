@@ -24,7 +24,7 @@ function textFrequency(path, freq, types) {
             } else {
                 freq[part.wordBase] = {
                     count: 1,
-                    ...part,
+                    word: part,
                     context: parsedSentence.sentence
                 };
             }
