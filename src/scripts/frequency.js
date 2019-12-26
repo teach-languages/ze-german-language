@@ -6,11 +6,11 @@ module.exports = () => {
     log.m('Starting frequency analysis...');
 
     gb.analysis.wordFrequency({ 
-        dir: data.corpora + '/30tausend', 
-        //recursive: true,
-        out: data.frequency + '/all.json',
-        //types: ['noun'],
-        limit: 500
+        dir: data.corpora, 
+        recursive: true,
+        out: data.frequency + '/noun.json',
+        types: ['noun'],
+        limit: 1000
     }).then(() => {
         log.m('Frequency analysis completed...');
     });

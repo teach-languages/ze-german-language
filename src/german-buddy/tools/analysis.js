@@ -11,18 +11,21 @@ function textFrequency(path, freq, types) {
     const text = fs.readFileSync(path, 'utf-8');
     const sentences = text.match(settings.regex.sentence);
 
+    if(!sentences) return;
+
     for(let sentenceRaw of sentences) {
         const parsedSentence = new Sentence(sentenceRaw);
 
         for(let part of parsedSentence.parts) {
-            if(part instanceof WordGroup) continue;
+            if(part instanceof WordGroup || !types.includes(part.type)) continue;
 
             if(freq[part.wordBase]) {
                 freq[part.wordBase].count++;
             } else {
                 freq[part.wordBase] = {
                     count: 1,
-                    ...part
+                    ...part,
+                    context: parsedSentence.sentence
                 };
             }
         }

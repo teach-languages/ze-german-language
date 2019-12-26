@@ -12,7 +12,8 @@ function noun_bases(noun) {
         ...(noun.endsWith('ern') ? [noun.slice(0, -3)] : []),
 
         ...(noun.includes('äu') ? noun_bases(noun.replace('äu', 'au')) : []),
-        ...(noun.includes('ä') ? noun_bases(noun.replace('ä', 'a')) : [])
+        ...(noun.includes('ä') ? noun_bases(noun.replace('ä', 'a')) : []),
+        ...(noun.includes('ü') ? noun_bases(noun.replace('ü', 'u')) : [])
     ]));
 }
 

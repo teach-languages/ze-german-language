@@ -9,11 +9,8 @@ module.exports = {
         let words = new WordGroup();
 
         for(let [key, type] of Object.entries(word)) {
-            console.log(key);
             words.push(type.test(wordRaw));
         }
-
-        console.log(words.length);
 
         if(words.length === 1) {
             [words] = words;
