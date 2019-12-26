@@ -1,1 +1,160 @@
-{}
+{
+	"verb": {
+		"present": {
+			"singular": {
+				"1": "",
+				"2": "",
+				"3": ""
+			},
+			"plural": {
+				"1": "",
+				"2": "",
+				"3": ""
+			}
+		},
+		"past": {
+			"singular": {
+				"1": "",
+				"2": "",
+				"3": ""
+			},
+			"plural": {
+				"1": "",
+				"2": "",
+				"3": ""
+			}
+		},
+		"conjunctive": {
+			"singular": {
+				"1": "",
+				"2": "",
+				"3": ""
+			},
+			"plural": {
+				"1": "",
+				"2": "",
+				"3": ""
+			}
+		},
+		"imperative": {
+			"singular": {
+				"2": ""
+			},
+			"plural": {
+				"1": "",
+				"2": "",
+				"3": ""
+			}
+		},
+		"participle": {
+			"present": "",
+			"past": ""
+		}
+	},
+
+	"sein": {
+		"present": {
+			"singular": {
+				"1": "bin",
+				"2": "bist",
+				"3": "ist"
+			},
+			"plural": {
+				"1": "sind",
+				"2": "seid",
+				"3": "sind"
+			}
+		},
+		"past": {
+			"singular": {
+				"1": "war",
+				"2": "warst",
+				"3": "war"
+			},
+			"plural": {
+				"1": "waren",
+				"2": "wart",
+				"3": "waren"
+			}
+		},
+		"conjunctive": {
+			"singular": {
+				"1": "sei",
+				"2": "seiest",
+				"3": "sei"
+			},
+			"plural": {
+				"1": "seien",
+				"2": "seiet",
+				"3": "seien"
+			}
+		},
+		"imperative": {
+			"singular": {
+				"2": "sei"
+			},
+			"plural": {
+				"1": "seien",
+				"2": "seid",
+				"3": "seien"
+			}
+		},
+		"participle": {
+			"present": "seiend",
+			"past": "gewesen"
+		}
+	},
+
+	"können": {
+		"present": {
+			"singular": {
+				"1": "kann",
+				"2": "kannst",
+				"3": "kann"
+			},
+			"plural": {
+				"1": "können",
+				"2": "könnt",
+				"3": "können"
+			}
+		},
+		"past": {
+			"singular": {
+				"1": "konnte",
+				"2": "konntest",
+				"3": "konnte"
+			},
+			"plural": {
+				"1": "konnten",
+				"2": "konntet",
+				"3": "konnten"
+			}
+		},
+		"conjunctive": {
+			"singular": {
+				"1": "könne",
+				"2": "könnest",
+				"3": "könne"
+			},
+			"plural": {
+				"1": "können",
+				"2": "könnet",
+				"3": "können"
+			}
+		},
+		"imperative": {
+			"singular": {
+				"2": ""
+			},
+			"plural": {
+				"1": "",
+				"2": "",
+				"3": ""
+			}
+		},
+		"participle": {
+			"present": "könnend",
+			"past": "gekonnt"
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
-    "personal": {
-        "ich": {
+    "personal": [
+        ["ich", {
             "caseSensitive": false,
             "person": 1,
             "plural": false,
@@ -8,6 +8,7 @@
             "accusative": "mich",
             "dative": "mir",
             "substantial": "meins",
+            "reflexive": "mich",
             "conjugation": {
                 "present": "e",
                 "past": "te",
@@ -23,9 +24,9 @@
                 "meiner": ["df", "gf", "gp"],
                 "meines": ["gm", "gn"]
             }
-        },
+        }],
 
-        "du": {
+        ["du", {
             "caseSensitive": false,
             "person": 2,
             "plural": false,
@@ -33,6 +34,7 @@
             "accusative": "dich",
             "dative": "dir",
             "substantial": "deins",
+            "reflexive": "dich",
             "conjugation": {
                 "present": "st",
                 "past": "test",
@@ -48,9 +50,9 @@
                 "deiner": ["df", "gf", "gp"],
                 "deines": ["gm", "gn"]
             }
-        },
+        }],
 
-        "Sie": {
+        ["Sie", {
             "caseSensitive": true,
             "person": 2,
             "plural": false,
@@ -58,6 +60,7 @@
             "accusative": "Sie",
             "dative": "Ihnen",
             "substantial": false,
+            "reflexive": "sich",
             "conjugation": {
                 "present": "en",
                 "past": "ten",
@@ -73,9 +76,9 @@
                 "Ihrer": ["df", "gf", "gp"],
                 "Ihres": ["gm", "gn"]
             }
-        },
+        }],
 
-        "er": {
+        ["er", {
             "caseSensitive": false,
             "person": 3,
             "plural": false,
@@ -83,6 +86,7 @@
             "accusative": "ihn",
             "dative": "ihm",
             "substantial": "seins",
+            "reflexive": "sich",
             "conjugation": {
                 "present": "t",
                 "past": "te",
@@ -98,9 +102,9 @@
                 "seiner": ["df", "gf", "gp"],
                 "seines": ["gm", "gn"]
             }
-        },
+        }],
 
-        "sie": {
+        ["sie", {
             "caseSensitive": false,
             "person": 3,
             "plural": false,
@@ -108,6 +112,7 @@
             "accusative": "sie",
             "dative": "ihr",
             "substantial": false,
+            "reflexive": "sich",
             "conjugation": {
                 "present": "t",
                 "past": "te",
@@ -123,9 +128,9 @@
                 "ihrer": ["df", "gf", "gp"],
                 "ihres": ["gm", "gn"]
             }
-        },
+        }],
 
-        "es": {
+        ["es", {
             "caseSensitive": false,
             "person": 3,
             "plural": false,
@@ -133,6 +138,7 @@
             "accusative": "es",
             "dative": "ihm",
             "substantial": "sein",
+            "reflexive": "sich",
             "conjugation": {
                 "present": "t",
                 "past": "te",
@@ -148,9 +154,9 @@
                 "seiner": ["df", "gf", "gp"],
                 "seines": ["gm", "gn"]
             }
-        },
+        }],
 
-        "wir": {
+        ["wir", {
             "caseSensitive": false,
             "person": 1,
             "plural": true,
@@ -158,6 +164,7 @@
             "accusative": "uns",
             "dative": "uns",
             "substantial": false,
+            "reflexive": "uns",
             "conjugation": {
                 "present": "en",
                 "past": "ten",
@@ -173,9 +180,9 @@
                 "unserer": ["df", "gf", "gp"],
                 "unseres": ["gm", "gn"]
             }
-        },
+        }],
 
-        "ihr": {
+        ["ihr", {
             "caseSensitive": false,
             "person": 2,
             "plural": true,
@@ -183,6 +190,7 @@
             "accusative": "euch",
             "dative": "euch",
             "substantial": false,
+            "reflexive": "euch",
             "conjugation": {
                 "present": "t",
                 "past": "tet",
@@ -198,9 +206,9 @@
                 "euerer": ["df", "gf", "gp"],
                 "eueres": ["gm", "gn"]
             }
-        },
+        }],
 
-        "_sie": {
+        ["sie", {
             "caseSensitive": false,
             "person": 3,
             "plural": true,
@@ -208,6 +216,7 @@
             "accusative": "sie",
             "dative": "ihr",
             "substantial": false,
+            "reflexive": "sich",
             "conjugation": {
                 "present": "en",
                 "past": "ten",
@@ -223,6 +232,6 @@
                 "ihrer": ["df", "gf", "gp"],
                 "ihres": ["gm", "gn"]
             }
-        }
-    }
+        }]
+    ]
 }

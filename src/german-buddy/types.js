@@ -5,7 +5,8 @@ module.exports = {
         PRONOUN: 'pronoun',
         VERB: 'verb',
         ADJECTIVE: 'adjective',
-        PREPOSITION: 'preposition'
+        PREPOSITION: 'preposition',
+        CONJUNCTION: 'conjunction'
     },
     case: {
         NOMINATIVE: 'nominative',

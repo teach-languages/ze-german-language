@@ -1,34 +1,29 @@
 const fs = require('fs');
 const process = require('./process');
 const log = require('../../logger');
+const settings = require('../../settings');
+const Sentence = require('../sentence');
+const WordGroup = require('../wordgroup');
 
 function textFrequency(path, freq, types) {
     log.m(`Analyzing ${path}...`);
 
     const text = fs.readFileSync(path, 'utf-8');
-    const sentences = text.match(/(?<=[\.!?'"„:]+\s)[\s,a-zA-ZüäößÜÄÖ\-–„“"…\d]+(?=[\.!?'"“:]+)/g);
+    const sentences = text.match(settings.regex.sentence);
 
-    if(!sentences) return;
+    for(let sentenceRaw of sentences) {
+        const parsedSentence = new Sentence(sentenceRaw);
 
-    log.m(`Found ${sentences.length} sentences...\n`);
+        for(let part of parsedSentence.parts) {
+            if(part instanceof WordGroup) continue;
 
-    for(let sentence of sentences) {
-        const wordList = sentence.match(/\b[a-zA-ZüöäßÜÖÄ-]+\b/g);
-
-        if(!wordList) continue;
-
-        for(let wordt of wordList) {
-            const parsed = process.word(wordt, sentence);
-
-            if(!types || types.includes(parsed.type)) {
-                if(freq[parsed.wordBase] !== undefined) {
-                    freq[parsed.wordBase].count++;
-                } else {
-                    freq[parsed.wordBase] = {
-                        count: 1,
-                        info: parsed
-                    };
-                }
+            if(freq[part.wordBase]) {
+                freq[part.wordBase].count++;
+            } else {
+                freq[part.wordBase] = {
+                    count: 1,
+                    ...part
+                };
             }
         }
     }

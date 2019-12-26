@@ -1,8 +1,7 @@
 const Word = require('./word');
 const types = require('../types');
 const data = require('../../data');
-
-const nounsSa = require(data.nouns.sa);
+const lang = require('../../lang');
 
 function noun_bases(noun) {
     return Array.from(new Set([
@@ -19,6 +18,7 @@ function noun_bases(noun) {
 
 class Noun extends Word {
     type = types.word.NOUN;
+    person = 3;
 
     bases() {
         return noun_bases(this.word);
@@ -29,7 +29,7 @@ class Noun extends Word {
         this.gender = types.gender.FEMININE;
 
         for (let base of this.bases()) {
-            const gender = nounsSa[base];
+            const gender = lang.nouns.sa[base];
             if (gender !== undefined && gender !== types.gender.PLURAL) {
                 this.wordBase = base;
                 this.gender = gender;
@@ -40,17 +40,31 @@ class Noun extends Word {
         }
     }
 
-    constructor(word, ctx) {
-        super(word, ctx);
+    static test(word) {
+        if(lang.nouns.sa[word] !== undefined) {
+            return new Noun(word);
+        }
+    }
+
+    constructor(word) {
+        super(word);
 
         // Identify Gender
-        this.gender = nounsSa[this.word];
-        this.person = 3;
-        this.wordBase = this.word;
+        this.gender = lang.nouns.sa[this.word];
 
         // Depluralize if plural
-        if (this.gender.includes(types.gender.PLURAL)) {
+        if (this.gender === types.gender.PLURAL) {
             this.depluralize();
+        } 
+        
+        if(this.gender.includes(types.gender.PLURAL)) {
+            if(!Array.isArray(this.gender)) {
+                this.gender = types.gender.FEMININE;
+            } else {
+                this.gender.splice(this.gender.indexOf(types.gender.PLURAL), 1);
+            
+                if(this.gender.length === 1) [this.gender] = this.gender;
+            }
         }
     }
 }

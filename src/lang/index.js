@@ -1,1 +1,1 @@
-module.exports = requireDir('lang');
+module.exports = global.requireDir('lang');

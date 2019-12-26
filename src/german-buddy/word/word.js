@@ -4,9 +4,7 @@ class Word {
     word = '';
     lower = '';
 
-    wordBase = ''
-
-    context = '';
+    wordBase = '';
 
     type = types.UNIDENTIFIED;
     gender = types.gender.NONE;
@@ -17,16 +15,18 @@ class Word {
     accusative = '';
     dative = '';
     substantial = '';
-    conjugation = '';
+    conjugation = {};
     genitive = {};
 
-    constructor(word, ctx) {
+    static test(word) {
+        return undefined;
+    }
+
+    constructor(word) {
         // Create word
         this.word = word;
+        this.wordBase = word;
         this.lower = word.toLowerCase();
-
-        // Create context
-        this.context = ctx;
     }
 }
 

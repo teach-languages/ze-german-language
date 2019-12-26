@@ -3,3 +3,4 @@ dictionary
 node_modules
 .DS_Store
 dict
+.idea

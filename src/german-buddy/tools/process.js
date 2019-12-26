@@ -1,22 +1,26 @@
-const word = require('../word');
+const data = require('../../data');
 const types = require('../types');
-const identify = require('./identify');
+const lang = require('../../lang');
+const word = require('../word');
+const WordGroup = require('../wordgroup');
 
 module.exports = {
-    word(wordRaw, ctx = '') {
-        // Determine type
-        const type = identify.basic(wordRaw);
+    word(wordRaw) {
+        let words = new WordGroup();
 
-        switch(type) {
-        case types.word.NOUN: {
-            return new word.Noun(wordRaw, ctx);
+        for(let [key, type] of Object.entries(word)) {
+            console.log(key);
+            words.push(type.test(wordRaw));
         }
-        case types.word.VERB: {
-            return new word.Verb(wordRaw, ctx);
+
+        console.log(words.length);
+
+        if(words.length === 1) {
+            [words] = words;
+        } else if(!words.length) {
+            return new word.Word(wordRaw);
         }
-        default: {
-            return new word.Word(wordRaw, ctx);
-        }
-        }
+    
+        return words;
     }
 };

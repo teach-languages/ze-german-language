@@ -1,19 +1,19 @@
 const fs = require('fs');
 const data = require('../data');
+const lang = require('../lang');
 
 module.exports = () => {
-    const pronouns = JSON.parse(fs.readFileSync(data.pronouns.sp, 'utf-8')).personal;
-
     const list = [];
-    for(let [pronoun, body] of Object.entries(pronouns)) {
+    for(let [pronoun, body] of lang.pronouns.sp.personal) {
         list.push(...[
             pronoun, 
             body.accusative, 
             body.dative, 
+            body.reflexive,
             ...(body.substantial ? [body.substantial] : []),
             ...Object.keys(body.genitive)
         ]);
     }
 
-    fs.writeFileSync(data.pronouns.list, JSON.stringify(list));
+    fs.writeFileSync(data.pronouns.list, JSON.stringify(Array.from(new Set(list))));
 };

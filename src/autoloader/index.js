@@ -6,7 +6,7 @@ function load(dir) {
     const obj = {};
 
     const files = fs.readdirSync(dir, { withFileTypes: true });
-    for(file of files) {
+    for(let file of files) {
         if(file.isDirectory()) {
             obj[file.name] = load(`${dir}/${file.name}`);
         } else if(file.isFile()) {
@@ -28,4 +28,4 @@ global.requireDir = (dir) => {
     };
 
     return mod;
-}
+};

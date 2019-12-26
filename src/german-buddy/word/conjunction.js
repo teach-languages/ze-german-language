@@ -2,12 +2,12 @@ const Word = require('./word');
 const types = require('../types');
 const lang = require('../../lang');
 
-class Verb extends Word {
-    type = types.word.VERB;
+class Conjunction extends Word {
+    type = types.word.CONJUNCTION;
 
     static test(word) {
-        if(lang.verbs.listobj[word.toLowerCase()]) {
-            return new Verb(word);
+        if(lang.conjunctions.list.includes(word.toLowerCase())) {
+            return new Conjunction(word);
         }
     }
 
@@ -18,4 +18,4 @@ class Verb extends Word {
     }
 }
 
-module.exports = Verb;
+module.exports = Conjunction;
