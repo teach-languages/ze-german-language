@@ -8,15 +8,15 @@ class Verb extends Word {
     conjugationTable() {
         const table = {
             verb: this.wordBase,
-            present: {},
-            past: {},
-            conjunctive: {},
-            imperative: {}
+            present: [],
+            past: [],
+            conjunctive: [],
+            imperative: []
         };
 
         for(let [pron, body] of lang.pronouns.sp.personal) {
             for(let [tense, ending] of Object.entries(body.conjugation)) {
-                table[tense][pron] = this.wordBase.replace(/en$/, ending);
+                table[tense].push([pron, this.wordBase.replace(/en$/, ending)]);
             }
         }
 
@@ -37,6 +37,8 @@ class Verb extends Word {
                 return this.lower.replace(new RegExp(ending + '$'), 'en');
             }
         }
+
+        return this.lower;
     }
 
     static test(word) {

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npx eslint --fix ./src",
     "api-debug": "nodemon . -- --run api --verbose",
-    "produce": "pm2 start . --name \"german-api\" -i 4 -- --verbose --run api",
+    "produce": "pm2 start . --name \"german-api\" -i 2 -- --verbose --run api",
     "stop": "pm2 stop german-api",
     "frequency": "node --max-old-space-size=8192 . --verbose --run frequency"
   },

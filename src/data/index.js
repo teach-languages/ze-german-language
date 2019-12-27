@@ -13,7 +13,8 @@ module.exports = {
     frequency: settings.projectRoot + '/lang/frequency',
     nouns: {
         sa: settings.projectRoot + '/lang/nouns/sa.json',
-        sg: settings.projectRoot + '/lang/nouns/sg.json'
+        sg: settings.projectRoot + '/lang/nouns/sg.json',
+        list: settings.projectRoot + '/lang/nouns/list.json'
     },
     prepositions: {
         sp: settings.projectRoot + '/lang/prepositions/sp.json'
