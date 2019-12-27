@@ -10,4 +10,6 @@ module.exports = () => {
     log.m(util.inspect(ich));
 
     log.m(verb.conjugate(ich, 'past'));
+
+    log.m(util.inspect(verb.conjugationTable()));
 };

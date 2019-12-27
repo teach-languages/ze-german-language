@@ -5,6 +5,24 @@ const lang = require('../../lang');
 class Verb extends Word {
     type = types.word.VERB;
 
+    conjugationTable() {
+        const table = {
+            verb: this.wordBase,
+            present: {},
+            past: {},
+            conjunctive: {},
+            imperative: {}
+        };
+
+        for(let [pron, body] of lang.pronouns.sp.personal) {
+            for(let [tense, ending] of Object.entries(body.conjugation)) {
+                table[tense][pron] = this.wordBase.replace(/en$/, ending);
+            }
+        }
+
+        return table;
+    }
+
     conjugate(pronoun, tense) {
         return this.wordBase.replace(/en$/, pronoun.conjugation[tense]);
     }
