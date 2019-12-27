@@ -8,8 +8,8 @@ module.exports = () => {
     gb.analysis.wordFrequency({ 
         dir: data.corpora + '/30tausend', 
         recursive: true,
-        out: data.frequency + '/verb.json',
-        types: ['verb'],
+        out: data.frequency + '/all.json',
+        //types: ['verb'],
         limit: 1000
     }).then(() => {
         log.m('Frequency analysis completed...');

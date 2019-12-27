@@ -3,8 +3,8 @@
         ["ich", {
             "caseSensitive": false,
             "person": 1,
-            "plural": false,
-            "gender": false,
+            "plurality": "singular",
+            "gender": "none",
             "accusative": "mich",
             "dative": "mir",
             "substantial": "meins",
@@ -29,8 +29,8 @@
         ["du", {
             "caseSensitive": false,
             "person": 2,
-            "plural": false,
-            "gender": false,
+            "plurality": "singular",
+            "gender": "none",
             "accusative": "dich",
             "dative": "dir",
             "substantial": "deins",
@@ -55,8 +55,8 @@
         ["Sie", {
             "caseSensitive": true,
             "person": 2,
-            "plural": false,
-            "gender": false,
+            "plurality": "singular",
+            "gender": "none",
             "accusative": "Sie",
             "dative": "Ihnen",
             "substantial": false,
@@ -81,7 +81,7 @@
         ["er", {
             "caseSensitive": false,
             "person": 3,
-            "plural": false,
+            "plurality": "singular",
             "gender": "masculine",
             "accusative": "ihn",
             "dative": "ihm",
@@ -107,7 +107,7 @@
         ["sie", {
             "caseSensitive": false,
             "person": 3,
-            "plural": false,
+            "plurality": "singular",
             "gender": "feminine",
             "accusative": "sie",
             "dative": "ihr",
@@ -133,7 +133,7 @@
         ["es", {
             "caseSensitive": false,
             "person": 3,
-            "plural": false,
+            "plurality": "singular",
             "gender": "neutral",
             "accusative": "es",
             "dative": "ihm",
@@ -159,8 +159,8 @@
         ["wir", {
             "caseSensitive": false,
             "person": 1,
-            "plural": true,
-            "gender": false,
+            "plurality": "plural",
+            "gender": "none",
             "accusative": "uns",
             "dative": "uns",
             "substantial": false,
@@ -185,8 +185,8 @@
         ["ihr", {
             "caseSensitive": false,
             "person": 2,
-            "plural": true,
-            "gender": false,
+            "plurality": "plural",
+            "gender": "none",
             "accusative": "euch",
             "dative": "euch",
             "substantial": false,
@@ -211,8 +211,8 @@
         ["sie", {
             "caseSensitive": false,
             "person": 3,
-            "plural": true,
-            "gender": false,
+            "plurality": "plural",
+            "gender": "none",
             "accusative": "sie",
             "dative": "ihr",
             "substantial": false,
@@ -233,5 +233,6 @@
                 "ihres": ["gm", "gn"]
             }
         }]
-    ]
+    ],
+    "impersonal": ["was", "man"]
 }

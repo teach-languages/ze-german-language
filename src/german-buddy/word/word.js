@@ -18,6 +18,7 @@ class Word {
     conjugation = {};
     genitive = {};
     caseSensitive = false;
+    irregular = false;
 
     static test(word) {
         return undefined;

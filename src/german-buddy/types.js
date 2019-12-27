@@ -6,7 +6,8 @@ module.exports = {
         VERB: 'verb',
         ADJECTIVE: 'adjective',
         PREPOSITION: 'preposition',
-        CONJUNCTION: 'conjunction'
+        CONJUNCTION: 'conjunction',
+        ADVERB: 'adverb'
     },
     case: {
         NOMINATIVE: 'nominative',
@@ -25,5 +26,8 @@ module.exports = {
         SINGULAR: 'singular',
         PLURAL: 'plural'
     },
-    UNIDENTIFIED: 'unidentified'
+    UNIDENTIFIED: 'unidentified',
+    distinction: {
+        BASIC: 'basic'
+    }
 };

@@ -3,13 +3,9 @@ const util = require('util');
 const log = require('../logger');
 
 module.exports = () => {
-    const verb = gb.process.word('macht');
-    log.m(util.inspect(verb, 3));
+    //const sentence = new gb.Sentence('Ich bin ein Mann', gb.types.distinction.BASIC);
+    //log.m(util.inspect(sentence, 3));
 
-    const ich = gb.word.Pronoun.create(1, false);
-    log.m(util.inspect(ich));
-
-    log.m(verb.conjugate(ich, 'past'));
-
-    log.m(util.inspect(verb.conjugationTable()));
+    const verb = gb.process.word('gemacht');
+    console.log(verb);
 };

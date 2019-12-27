@@ -4,6 +4,7 @@ const log = require('../../logger');
 const settings = require('../../settings');
 const Sentence = require('../sentence');
 const WordGroup = require('../wordgroup');
+const typesb = require('../types');
 
 function textFrequency(path, freq, types) {
     log.m(`Analyzing ${path}...`);
@@ -14,10 +15,10 @@ function textFrequency(path, freq, types) {
     if(!sentences) return;
 
     for(let sentenceRaw of sentences) {
-        const parsedSentence = new Sentence(sentenceRaw);
+        const parsedSentence = new Sentence(sentenceRaw, typesb.distinction.BASIC);
 
         for(let part of parsedSentence.parts) {
-            if(part instanceof WordGroup || !types.includes(part.type)) continue;
+            if(part instanceof WordGroup || (types && !types.includes(part.type))) continue;
 
             if(freq[part.wordBase]) {
                 freq[part.wordBase].count++;

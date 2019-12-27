@@ -6,9 +6,9 @@ const WordGroup = require('../wordgroup');
 class Pronoun extends Word {
     type = types.word.PRONOUN;
 
-    static create(person = 1, plural = false) {
+    static create(person = 1, plurality = types.plurality.SINGULAR) {
         for(let [pron, body] of lang.pronouns.sp.personal) {
-            if(body.person === person && body.plural === plural) {
+            if(body.person === person && body.plurality === plurality) {
                 const pronoun = new Pronoun(pron);
                 Object.assign(pronoun, body);
                 
@@ -23,31 +23,26 @@ class Pronoun extends Word {
         const lower = word.toLowerCase();
         if(lang.pronouns.list.includes(lower)) {
             const pronouns = new WordGroup();
-
-            for(let [pronoun, val] of lang.pronouns.sp.personal) {
-                if(lower === pronoun
-                    || lower === val.accusative
-                    || lower === val.dative
-                    || lower === val.substantial
-                    || lower === val.reflexive
-                    || Object.keys(val.genitive).includes(lower)) {
+            
+            if(JSON.stringify(lang.pronouns.sp.personal).includes(lower)) {
+                for(let [pronoun, val] of lang.pronouns.sp.personal) {
+                    if(lower === pronoun
+                        || lower === val.accusative
+                        || lower === val.dative
+                        || lower === val.substantial
+                        || lower === val.reflexive
+                        || Object.keys(val.genitive).includes(lower)) {
                         const pronounBase = new Pronoun(pronoun);
                         pronounBase.word = word;
                         pronounBase.lower = lower;
-
+    
                         Object.assign(pronounBase, val);
-
-                        /*pronounBase.person = val.person;
-                        pronounBase.plural = val.plural;
-                        pronounBase.gender = val.gender;
-                        pronounBase.accusative = val.accusative;
-                        pronounBase.substantial = val.substantial;
-                        pronounBase.reflexive = val.reflexive;
-                        pronounBase.conjugation = val.conjugation;
-                        pronounBase.genitive = val.genitive;*/
-
+    
                         pronouns.push(pronounBase);
                     }
+                }
+            } else {
+                pronouns.push(new Pronoun(lower));
             }
 
             if(pronouns.length > 1) {

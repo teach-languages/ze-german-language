@@ -156,5 +156,111 @@
 			"present": "könnend",
 			"past": "gekonnt"
 		}
+	},
+
+	"haben": {
+		"present": {
+			"singular": {
+				"1": "habe",
+				"2": "hast",
+				"3": "hat"
+			},
+			"plural": {
+				"1": "haben",
+				"2": "habt",
+				"3": "haben"
+			}
+		},
+		"past": {
+			"singular": {
+				"1": "hatte",
+				"2": "hattest",
+				"3": "hatte"
+			},
+			"plural": {
+				"1": "hatten",
+				"2": "hattet",
+				"3": "hatten"
+			}
+		},
+		"conjunctive": {
+			"singular": {
+				"1": "habe",
+				"2": "habest",
+				"3": "habe"
+			},
+			"plural": {
+				"1": "haben",
+				"2": "habet",
+				"3": "haben"
+			}
+		},
+		"imperative": {
+			"singular": {
+				"2": "hab"
+			},
+			"plural": {
+				"1": "haben",
+				"2": "habt",
+				"3": "haben"
+			}
+		},
+		"participle": {
+			"present": "habend",
+			"past": "gehabt"
+		}
+	},
+
+	"werden": {
+		"present": {
+			"singular": {
+				"1": "werde",
+				"2": "wirst",
+				"3": "wird"
+			},
+			"plural": {
+				"1": "werden",
+				"2": "werdet",
+				"3": "werden"
+			}
+		},
+		"past": {
+			"singular": {
+				"1": "wurde",
+				"2": "wurdest",
+				"3": "wurde"
+			},
+			"plural": {
+				"1": "wurden",
+				"2": "wurdet",
+				"3": "wurden"
+			}
+		},
+		"conjunctive": {
+			"singular": {
+				"1": "werde",
+				"2": "werdest",
+				"3": "werde"
+			},
+			"plural": {
+				"1": "werden",
+				"2": "werdet",
+				"3": "werden"
+			}
+		},
+		"imperative": {
+			"singular": {
+				"2": "werde"
+			},
+			"plural": {
+				"1": "werden",
+				"2": "werdet",
+				"3": "werden"
+			}
+		},
+		"participle": {
+			"present": "werdend",
+			"past": "geworden"
+		}
 	}
 }

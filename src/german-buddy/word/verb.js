@@ -24,17 +24,36 @@ class Verb extends Word {
     }
 
     conjugate(pronoun, tense) {
-        return this.wordBase.replace(/en$/, pronoun.conjugation[tense]);
+        if(this.irregular) {
+            return lang.verbs.irrsv[this.wordBase][tense][pronoun.plurality][`${pronoun.person}`];
+        } else {
+            return this.wordBase.replace(/en$/, pronoun.conjugation[tense]);
+        }
     }
 
     getBase() {
+        // Check irregulars
+        for(let [key, value] of Object.entries(lang.verbs.irrsv)) {
+            if(JSON.stringify(value).includes(this.lower)) {
+                this.irregular = true;
+                return key;
+            }
+        }
+        
+        // Check if it's already in base form
         if(this.lower.endsWith('en')) {
             return this.lower;
         }
 
+        // Check if it's a participle
+        if(this.lower.startsWith('ge') && this.lower.endsWith('t')) {
+            return this.lower.slice(2, -1) + 'en';
+        }
+
+        // Check regular conjugation endings
         for(let ending of lang.pronouns.conjendings) {
             if(this.lower.endsWith(ending)) {
-                return this.lower.replace(new RegExp(ending + '$'), 'en');
+                return this.lower.slice(0, this.lower.lastIndexOf(ending)) + 'en';
             }
         }
 

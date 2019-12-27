@@ -5,6 +5,7 @@ const Article = require('./article');
 const Conjunction = require('./conjunction');
 const Pronoun = require('./pronoun');
 const Preposition = require('./preposition');
+const Adverb = require('./adverb');
 
 module.exports = {
     Word,
@@ -13,5 +14,6 @@ module.exports = {
     Article,
     Conjunction,
     Pronoun,
-    Preposition
+    Preposition,
+    Adverb
 };

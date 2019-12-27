@@ -3,7 +3,7 @@ const data = require('../data');
 const lang = require('../lang');
 
 module.exports = () => {
-    const list = [];
+    const list = [...lang.pronouns.sp.impersonal];
     for(let [pronoun, body] of lang.pronouns.sp.personal) {
         list.push(...[
             pronoun, 
