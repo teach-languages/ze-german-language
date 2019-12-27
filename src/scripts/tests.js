@@ -3,8 +3,11 @@ const util = require('util');
 const log = require('../logger');
 
 module.exports = () => {
-    const sentence = new gb.Sentence('Simon lutscht Pimmel');
-    log.m(util.inspect(sentence, true));
+    const verb = gb.process.word('macht');
+    log.m(util.inspect(verb, 3));
 
-    //log.m(util.inspect(gb.process.word('Mann'), 3));
+    const ich = gb.word.Pronoun.create(1, false);
+    log.m(util.inspect(ich));
+
+    log.m(verb.conjugate(ich, 'past'));
 };

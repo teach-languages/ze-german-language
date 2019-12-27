@@ -20,7 +20,8 @@ module.exports = {
     },
     pronouns: {
         list: settings.projectRoot + '/lang/pronouns/list.json',
-        sp: settings.projectRoot + '/lang/pronouns/sp.json'
+        sp: settings.projectRoot + '/lang/pronouns/sp.json',
+        conjendings: settings.projectRoot + '/lang/pronouns/conjendings.json'
     },
     verbs: {
         irrsv: settings.projectRoot + '/lang/verbs/irrsv.json',

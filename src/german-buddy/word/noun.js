@@ -20,6 +20,7 @@ function noun_bases(noun) {
 class Noun extends Word {
     type = types.word.NOUN;
     person = 3;
+    caseSensitive = true;
 
     bases() {
         return noun_bases(this.word);
