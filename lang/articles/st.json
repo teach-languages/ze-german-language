@@ -8,8 +8,9 @@
         "des": ["gm", "gn"]
     },
     "indefinite": {
-        "ein": ["nm", "nn"],
-        "eine": ["nf"],
+        "ein": ["nm", "nn", "an"],
+        "eine": ["nf", "af"],
+        "einen": ["am"],
         "einem": ["dm", "dn"],
         "einer": ["df", "gf"],
         "eines": ["gm", "gn"]

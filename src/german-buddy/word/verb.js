@@ -39,11 +39,6 @@ class Verb extends Word {
                 return key;
             }
         }
-        
-        // Check if it's already in base form
-        if(this.lower.endsWith('en')) {
-            return this.lower;
-        }
 
         // Check if it's a participle
         if(this.lower.startsWith('ge') && this.lower.endsWith('t')) {
@@ -53,7 +48,10 @@ class Verb extends Word {
         // Check regular conjugation endings
         for(let ending of lang.pronouns.conjendings) {
             if(this.lower.endsWith(ending)) {
-                return this.lower.slice(0, this.lower.lastIndexOf(ending)) + 'en';
+                const sliced = this.lower.slice(0, this.lower.lastIndexOf(ending)) + 'en';
+                if(lang.verbs.listobj[sliced]) {
+                    return sliced;
+                }
             }
         }
 

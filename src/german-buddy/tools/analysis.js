@@ -20,11 +20,14 @@ function textFrequency(path, freq, types) {
         for(let part of parsedSentence.parts) {
             if(part instanceof WordGroup || (types && !types.includes(part.type))) continue;
 
-            if(freq[part.wordBase]) {
-                freq[part.wordBase].count++;
+            freq.total++;
+
+            if(freq.words[`${part.wordBase} {${part.type}}`]) {
+                freq.words[`${part.wordBase} {${part.type}}`].count++;
             } else {
-                freq[part.wordBase] = {
+                freq.words[`${part.wordBase} {${part.type}}`] = {
                     count: 1,
+                    percentage_total: 0,
                     word: part,
                     context: parsedSentence.sentence
                 };
@@ -62,7 +65,10 @@ module.exports = {
         const start = Date.now();
         log.m('Starting frequency analysis...');
 
-        const frequency = {};
+        const frequency = {
+            total: 0,
+            words: {}
+        };
 
         if(path) {
             textFrequency(path, frequency, types);
@@ -76,7 +82,14 @@ module.exports = {
         }
 
         log.m('Sorting and writing...');
-        fs.writeFileSync(out || `out/frequency.${(types && types.join('_')) || 'all'}.${Date.now()}.json`, JSON.stringify(sortedArray(frequency, limit || 1000), null, 4));
+
+        frequency.words = sortedArray(frequency.words, limit || 1000);
+
+        for(let word of Object.values(frequency.words)) {
+            word.percentage_total = Math.round((word.count / frequency.total) * 100);
+        }
+
+        fs.writeFileSync(out, JSON.stringify(frequency, null, 3));
 
         log.m(`Done in ${Date.now() - start}ms...`);
     }

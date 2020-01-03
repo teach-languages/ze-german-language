@@ -9,7 +9,7 @@ module.exports = () => {
         dir: data.corpora + '/30tausend', 
         recursive: true,
         out: data.frequency + '/all.json',
-        //types: ['verb'],
+        //types: ['unidentified'],
         limit: 1000
     }).then(() => {
         log.m('Frequency analysis completed...');

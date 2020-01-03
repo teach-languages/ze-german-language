@@ -59,7 +59,7 @@
             "gender": "none",
             "accusative": "Sie",
             "dative": "Ihnen",
-            "substantial": false,
+            "substantial": "none",
             "reflexive": "sich",
             "conjugation": {
                 "present": "en",
@@ -111,7 +111,7 @@
             "gender": "feminine",
             "accusative": "sie",
             "dative": "ihr",
-            "substantial": false,
+            "substantial": "none",
             "reflexive": "sich",
             "conjugation": {
                 "present": "t",
@@ -163,7 +163,7 @@
             "gender": "none",
             "accusative": "uns",
             "dative": "uns",
-            "substantial": false,
+            "substantial": "none",
             "reflexive": "uns",
             "conjugation": {
                 "present": "en",
@@ -189,7 +189,7 @@
             "gender": "none",
             "accusative": "euch",
             "dative": "euch",
-            "substantial": false,
+            "substantial": "none",
             "reflexive": "euch",
             "conjugation": {
                 "present": "t",
@@ -215,7 +215,7 @@
             "gender": "none",
             "accusative": "sie",
             "dative": "ihr",
-            "substantial": false,
+            "substantial": "none",
             "reflexive": "sich",
             "conjugation": {
                 "present": "en",

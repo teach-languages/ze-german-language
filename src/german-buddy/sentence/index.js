@@ -1,7 +1,7 @@
 const process = require('../tools/process');
 const settings = require('../../settings');
 const types = require('../types');
-const Wordgroup = require('../wordgroup');
+const WordGroup = require('../wordgroup');
 
 const priorityList = [
     types.word.ARTICLE,
@@ -11,7 +11,8 @@ const priorityList = [
     types.word.ADVERB,
     types.word.ADJECTIVE,
     types.word.VERB,
-    types.word.NOUN
+    types.word.NOUN,
+    types.UNIDENTIFIED
 ];
 
 class Sentence {
@@ -33,17 +34,22 @@ class Sentence {
 
         switch(distinctionType) {
             case types.distinction.BASIC: {
-                for(let i = 0; i < this.parts.length; i++) {
-                    if(this.parts[i] instanceof Wordgroup) {
+                const parts = [];
+
+                for(let part of this.parts) {
+                    if(part instanceof WordGroup) {
                         for(let priority of priorityList) {
-                            for(let y = 0; y < this.parts[i].length; y++) {
-                                if(this.parts[i][y].type = priority) {
-                                    this.parts[i] = this.parts[i][y];
-                                }
+                            if(part.some(e => e.type === priority)) {
+                                parts.push(part.find(e => e.type === priority));
+                                break;
                             }
                         }
+                    } else {
+                        parts.push(part);
                     }
                 }
+
+                this.parts = parts;
                 break;
             }
         }

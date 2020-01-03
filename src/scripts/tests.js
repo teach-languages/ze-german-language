@@ -3,9 +3,8 @@ const util = require('util');
 const log = require('../logger');
 
 module.exports = () => {
-    //const sentence = new gb.Sentence('Ich bin ein Mann', gb.types.distinction.BASIC);
-    //log.m(util.inspect(sentence, 3));
+    const raw = 'Jetzt mal sehen wie du mit komplizierten Sätzen umgehst.';
 
-    const verb = gb.process.word('gemacht');
-    console.log(verb);
+    const sentence = new gb.Sentence(raw, gb.types.distinction.BASIC);
+    log.m(util.inspect(sentence, 3));
 };
